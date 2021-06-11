@@ -1,5 +1,5 @@
 {
-  "name": "tiktok-signature",
+  "name": "@gettymoney/tiktok-signature",
   "version": "1.3.0",
   "description": "Generate TikTok Signature",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carcabot/tiktok-signature.git"
+    "url": "git+https://github.com/gettymoney/tiktok-signature.git"
   },
   "keywords": [
     "tiktok",
@@ -19,9 +19,9 @@
   "author": "CarcaBot",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carcabot/tiktok-signature/issues"
+    "url": "https://github.com/gettymoney/tiktok-signature/issues"
   },
-  "homepage": "https://github.com/carcabot/tiktok-signature#readme",
+  "homepage": "https://github.com/gettymoney/tiktok-signature#readme",
   "dependencies": {
     "playwright-aws-lambda": "^0.7.0",
     "playwright-core": "^1.12.1"
