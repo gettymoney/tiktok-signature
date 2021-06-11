@@ -1,6 +1,14 @@
-const { devices, chromium } = require("playwright-chromium");
+const playwright = require('playwright-aws-lambda');
 const Utils = require("./utils");
-const iPhone11 = devices["iPhone 11 Pro"];
+const iPhone11 = {
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Mobile/15E148 Safari/604.1',
+  screen: { width: 375, height: 812 },
+  viewport: { width: 375, height: 635 },
+  deviceScaleFactor: 3,
+  isMobile: true,
+  hasTouch: true,
+  defaultBrowserType: 'webkit'
+}
 class Signer {
   userAgent =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (Windows NT 10.0; Win64; x64) Chrome/90.0.4430.85 Safari/537.36";
@@ -39,7 +47,7 @@ class Signer {
 
   async init() {
     if (!this.browser) {
-      this.browser = await chromium.launch(this.options);
+      this.browser = await playwright.launchChromium(this.options);
     }
 
     let emulateTemplate = {
